@@ -17,7 +17,7 @@ from apex import amp
 def get_train_transforms(img_size):
     return A.Compose(
         [
-            A.RandomSizedCrop(min_max_height=(800, 800), height=1024, width=1024, p=0.5),
+            A.RandomSizedCrop(min_max_height=(500, 500), height=512, width=512, p=0.5),
             A.OneOf([
                 A.HueSaturationValue(
                     hue_shift_limit=0.2,
